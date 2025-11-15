@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gifty – Smart Gifting Made Simple</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+  <!-- 🔹 Navigation -->
+  <header class="navbar">
+    <div class="nav-logo">Gifty</div>
+    <nav class="nav-links">
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="login-btn">Login</button>
+    </nav>
+  </header>
+
+  <!-- 🔹 Hero -->
+  <section class="hero">
+    <h1>Gifty</h1>
+    <h2>Smart Gifting Made Simple</h2>
+    <p>
+      Discover, personalize, and deliver thoughtful gifts instantly with a modern interface designed for effortless gifting.
+    </p>
+    <button class="get-started-btn">Get Started</button>
+  </section>
+
+  <!-- 🔹 Chatbot -->
+  <div id="chatbot" class="chatbot">
+    <div class="chat-header">
+      <span>AI Assistant</span>
+      <div class="chat-controls">
+        <button id="refresh-btn" title="Refresh Chat">⟳</button>
+        <button id="close-btn" title="Close">✕</button>
+      </div>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <button id="send-btn">➤</button>
+    </div>
+
+    <div class="powered">Powered by Gifty (Beta)</div>
+  </div>
+
+  <!-- 💡 Floating Icon -->
+  <div id="chat-toggle" class="chat-toggle">💡</div>
+
+  <!-- Script -->
+  <script src="script.js?v=6" defer></script>
+</body>
+</html>

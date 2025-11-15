@@ -1,0 +1,37 @@
+﻿type,question,answer
+qa,what is gifty,Gifty is an AI-powered assistant that helps you find perfect gifts 🎁.
+qa,who created you,I was created by the ScriptBees team to make gifting smarter! 💡
+qa,how to use gifty,"Just tell me the occasion or person, and I’ll suggest thoughtful gifts."
+qa,what can you do,"I suggest personalized gifts, share links, and inspire new ideas! 🎀"
+qa,hi,Hello 👋 I’m Gifty — your personal gifting assistant. What’s the occasion?
+qa,hello,Hi there 🌟 Tell me your occasion and I’ll suggest amazing gift options!
+gift,birthday,"🎂 Birthday Gift Ideas:<ul>
+<li><a href='https://www.amazon.in/s?k=birthday+explosion+box' target='_blank'>🎁 Birthday Explosion Box – Amazon</a></li>
+<li><a href='https://www.amazon.in/s?k=personalized+birthday+mug' target='_blank'>☕ Personalized Birthday Mug – Amazon</a></li>
+<li><a href='https://www.flipkart.com/search?q=birthday+gift+combo' target='_blank'>🎉 Birthday Gift Combo – Flipkart</a></li>
+<li><a href='https://www.flipkart.com/search?q=birthday+greeting+card' target='_blank'>💌 Greeting Card – Flipkart</a></li>
+</ul>"
+gift,anniversary,"💖 Anniversary Gift Ideas:<ul>
+<li><a href='https://www.amazon.in/s?k=couple+photo+frame+anniversary' target='_blank'>🖼️ Couple Frame – Amazon</a></li>
+<li><a href='https://www.amazon.in/s?k=heart+led+lamp+anniversary' target='_blank'>💞 Heart LED Lamp – Amazon</a></li>
+<li><a href='https://www.flipkart.com/search?q=anniversary+gift+box' target='_blank'>🎁 Romantic Gift Box – Flipkart</a></li>
+<li><a href='https://www.flipkart.com/search?q=romantic+candle+set' target='_blank'>🕯️ Candle Set – Flipkart</a></li>
+</ul>"
+gift,valentine,"❤️ Valentine’s Day Ideas:<ul>
+<li><a href='https://www.amazon.in/s?k=valentine+gift+hamper' target='_blank'>🎁 Valentine Gift Hamper – Amazon</a></li>
+<li><a href='https://www.amazon.in/s?k=love+explosion+box' target='_blank'>💌 Love Explosion Box – Amazon</a></li>
+<li><a href='https://www.flipkart.com/search?q=valentine+gift+combo' target='_blank'>💖 Valentine Combo – Flipkart</a></li>
+<li><a href='https://www.flipkart.com/search?q=rose+teddy+gift' target='_blank'>🌹 Rose Teddy Gift – Flipkart</a></li>
+</ul>"
+gift,farewell,"👋 Farewell Gift Ideas:<ul>
+<li><a href='https://www.amazon.in/s?k=farewell+mug' target='_blank'>☕ Goodbye Mug – Amazon</a></li>
+<li><a href='https://www.amazon.in/s?k=farewell+diary' target='_blank'>📖 Farewell Diary – Amazon</a></li>
+<li><a href='https://www.flipkart.com/search?q=farewell+gift+combo' target='_blank'>🎁 Farewell Gift Combo – Flipkart</a></li>
+<li><a href='https://www.flipkart.com/search?q=pen+set+gift' target='_blank'>🖋️ Pen Set – Flipkart</a></li>
+</ul>"
+gift,annual,"🏆 Annual Day Gift Ideas:<ul>
+<li><a href='https://www.amazon.in/s?k=corporate+trophy+gift' target='_blank'>🏅 Corporate Trophy – Amazon</a></li>
+<li><a href='https://www.amazon.in/s?k=appreciation+plaque+award' target='_blank'>🎖️ Appreciation Plaque – Amazon</a></li>
+<li><a href='https://www.flipkart.com/search?q=employee+gift+set' target='_blank'>🎁 Employee Gift Set – Flipkart</a></li>
+<li><a href='https://www.flipkart.com/search?q=office+desk+decor+gift' target='_blank'>🕯️ Decorative Desk Gift – Flipkart</a></li>
+</ul>"

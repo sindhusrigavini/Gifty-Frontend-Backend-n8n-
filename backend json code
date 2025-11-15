@@ -1,0 +1,102 @@
+// 🧠 Gifty backend logic — works with button clicks + link suggestions
+
+const userMessage = ($json.body?.message || "").toLowerCase();
+let reply = "";
+
+// 1️⃣ Q&A responses
+const qaData = [
+  { q: "what is gifty", a: "🎁 Gifty is an AI-powered assistant that helps you find perfect gifts for any occasion." },
+  { q: "who created you", a: "💡 I was created by the ScriptBees team to make gifting smarter and easier!" },
+  { q: "how to use gifty", a: "Simply tell me the occasion or person, and I’ll suggest thoughtful gifts instantly." },
+  { q: "what can you do", a: "I can suggest personalized gifts, share product links, and help you explore ideas for birthdays, anniversaries, farewells, and more!" },
+  { q: "hi", a: "👋 Hi! I’m Gifty — your personal gifting assistant. What are you celebrating today?" },
+  { q: "hello", a: "🌟 Hello there! Tell me your occasion and I’ll find amazing gift options for you!" },
+];
+
+// 2️⃣ If message matches any Q&A
+const match = qaData.find((pair) => userMessage.includes(pair.q.toLowerCase()));
+if (match) {
+  reply = match.a;
+}
+
+// 3️⃣ Show buttons for occasions
+else if (userMessage.includes("gift") || userMessage.includes("occasion")) {
+  reply = `
+  💡 Here are some popular gift occasions you can explore 🎁<br><br>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <button style="background:#007bff;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;" data-msg="birthday">🎂 Birthday</button>
+    <button style="background:#e91e63;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;" data-msg="anniversary">💖 Anniversary</button>
+    <button style="background:#f06292;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;" data-msg="valentine">❤️ Valentine’s Day</button>
+    <button style="background:#ffa726;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;" data-msg="farewell">👋 Farewell</button>
+    <button style="background:#7e57c2;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;" data-msg="annual">🏆 Annual Day</button>
+  </div>
+  `;
+}
+
+// 4️⃣ Birthday gifts
+else if (userMessage.includes("birthday")) {
+  reply = `
+  🎂 <strong>Birthday Gift Ideas</strong><br><br>
+  <ul>
+    <li><a href="https://www.amazon.in/s?k=birthday+explosion+box" target="_blank">🎁 Birthday Explosion Box – Amazon</a></li>
+    <li><a href="https://www.amazon.in/s?k=personalized+birthday+mug" target="_blank">☕ Personalized Birthday Mug – Amazon</a></li>
+    <li><a href="https://www.flipkart.com/search?q=birthday+gift+combo" target="_blank">🎉 Birthday Gift Combo – Flipkart</a></li>
+    <li><a href="https://www.flipkart.com/search?q=birthday+greeting+card" target="_blank">🎈 Greeting Card – Flipkart</a></li>
+  </ul>`;
+}
+
+// 5️⃣ Anniversary gifts
+else if (userMessage.includes("anniversary")) {
+  reply = `
+  💖 <strong>Anniversary Gift Ideas</strong><br><br>
+  <ul>
+    <li><a href="https://www.amazon.in/s?k=couple+photo+frame+anniversary" target="_blank">💞 Couple Frame – Amazon</a></li>
+    <li><a href="https://www.amazon.in/s?k=heart+led+lamp+anniversary" target="_blank">💖 Heart LED Lamp – Amazon</a></li>
+    <li><a href="https://www.flipkart.com/search?q=anniversary+gift+box" target="_blank">💝 Romantic Gift Box – Flipkart</a></li>
+    <li><a href="https://www.flipkart.com/search?q=romantic+candle+set" target="_blank">🕯️ Candle Set – Flipkart</a></li>
+  </ul>`;
+}
+
+// 6️⃣ Valentine gifts
+else if (userMessage.includes("valentine")) {
+  reply = `
+  ❤️ <strong>Valentine’s Day Gift Ideas</strong><br><br>
+  <ul>
+    <li><a href="https://www.amazon.in/s?k=valentine+gift+hamper" target="_blank">💌 Gift Hamper – Amazon</a></li>
+    <li><a href="https://www.amazon.in/s?k=love+explosion+box" target="_blank">💖 Love Explosion Box – Amazon</a></li>
+    <li><a href="https://www.flipkart.com/search?q=valentine+gift+combo" target="_blank">💝 Combo Set – Flipkart</a></li>
+    <li><a href="https://www.flipkart.com/search?q=rose+teddy+gift" target="_blank">🌹 Rose Teddy – Flipkart</a></li>
+  </ul>`;
+}
+
+// 7️⃣ Farewell gifts
+else if (userMessage.includes("farewell")) {
+  reply = `
+  👋 <strong>Farewell Gift Ideas</strong><br><br>
+  <ul>
+    <li><a href="https://www.amazon.in/s?k=farewell+mug" target="_blank">☕ Goodbye Mug – Amazon</a></li>
+    <li><a href="https://www.amazon.in/s?k=farewell+diary" target="_blank">📖 Diary – Amazon</a></li>
+    <li><a href="https://www.flipkart.com/search?q=farewell+gift+combo" target="_blank">🎁 Combo Gift – Flipkart</a></li>
+    <li><a href="https://www.flipkart.com/search?q=pen+set+gift" target="_blank">🖋️ Pen Set – Flipkart</a></li>
+  </ul>`;
+}
+
+// 8️⃣ Annual Day gifts
+else if (userMessage.includes("annual")) {
+  reply = `
+  🏆 <strong>Annual Day Gift Ideas</strong><br><br>
+  <ul>
+    <li><a href="https://www.amazon.in/s?k=corporate+trophy+gift" target="_blank">🏅 Trophy – Amazon</a></li>
+    <li><a href="https://www.amazon.in/s?k=appreciation+plaque+award" target="_blank">🎖️ Plaque Award – Amazon</a></li>
+    <li><a href="https://www.flipkart.com/search?q=employee+gift+set" target="_blank">🎁 Gift Set – Flipkart</a></li>
+    <li><a href="https://www.flipkart.com/search?q=office+desk+decor+gift" target="_blank">🕯️ Desk Decor – Flipkart</a></li>
+  </ul>`;
+}
+
+// 9️⃣ Fallback
+if (!reply) {
+  reply = "🤔 I’m not sure about that. Try asking about birthdays, anniversaries, farewells, or other events!";
+}
+
+// ✅ Output
+return [{ json: { reply } }];
